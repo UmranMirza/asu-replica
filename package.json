@@ -20,6 +20,11 @@
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/vue-fontawesome": "^3.2.0",
+    "@rds-vue-ui/footer-standard": "^0.4.1",
+    "@rds-vue-ui/header-standard": "^0.3.5",
+    "@rds-vue-ui/hero-video-apollo": "^0.9.0",
+    "@rds-vue-ui/rds-theme-base": "^0.7.2",
+    "@rds-vue-ui/section-video-apollo": "^0.2.1",
     "nuxt": "^4.4.8",
     "vue": "^3.5.35"
   },

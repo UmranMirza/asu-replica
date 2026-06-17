@@ -4,5 +4,9 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/eslint'],
 
-  css: ['~~/assets/styles/main.scss', '@fortawesome/fontawesome-free/css/all.min.css'],
+  css: [
+    '@rds-vue-ui/rds-theme-base/style/rds-theme-base.scss',
+    '~~/assets/styles/main.scss',
+    '@fortawesome/fontawesome-free/css/all.min.css',
+  ],
 })
