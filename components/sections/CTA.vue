@@ -216,7 +216,14 @@
     font-weight: 700;
     line-height: 1.2;
   }
+  .cta-btn {
+    width: fit-content;
+  }
 
+  .cta-btn :deep(button) {
+    border-radius: 999px;
+    font-weight: 700;
+  }
   .cta-card p {
     margin: 0 0 20px;
 

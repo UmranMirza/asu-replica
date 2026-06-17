@@ -1,44 +1,4 @@
 <template>
-  <!-- <section class="hero">
-    <video
-      ref="videoRef"
-      autoplay
-      muted
-      loop
-      playsinline
-      class="hero-video"
-    >
-      <source src="/videos/hero.mp4" type="video/mp4" />
-    </video>
-
-    <div class="overlay"></div>
-
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>
-          Study at one of the most prestigious
-          research institutions in the nation
-        </h1>
-
-        <p>
-          ASU is part of the Association of American Universities,
-          a highly selective group of top research institutions
-          that advocates for innovation, education and academic excellence.
-        </p>
-
-        <button class="cta-button">
-          Find out more
-        </button>
-      </div>
-
-      <button
-        class="pause-button"
-        @click="toggleVideo"
-      >
-        {{ isPlaying ? '❚❚' : '▶' }}
-      </button>
-    </div>
-  </section> -->
   <section class="hero">
     <!-- Desktop Video -->
     <div class="overlay" />
@@ -52,7 +12,8 @@
           research institutions that advocates for innovation, education and academic excellence.
         </p>
 
-        <button class="cta-button">Find out more</button>
+        <!-- <button class="cta-button">Find out more</button> -->
+        <RdsButton class="cta-button" size="large"> Find out more </RdsButton>
       </div>
 
       <button class="pause-button" @click="toggleVideo">
@@ -177,7 +138,7 @@ const toggleVideo = () => {
 
   font-size: 1.1rem;
   font-weight: 700;
-
+  color: #191919;
   cursor: pointer;
 }
 

@@ -49,7 +49,8 @@
         from K-12 to midcareer to postretirement and every individual in between.
       </p>
 
-      <button>Learn more</button>
+      <!-- <button>Learn more</button> -->
+      <RdsButton class="button" size="large"> Visit </RdsButton>
     </div>
   </section>
 </template>
@@ -265,7 +266,7 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
   line-height: 1.7;
 }
 
-.content-card button {
+.content-card .button {
   margin-top: 12px;
 
   border: none;
@@ -286,7 +287,7 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
     transform 0.3s ease;
 }
 
-.content-card button:hover {
+.content-card .button:hover {
   background: #6d1632;
   transform: translateY(-2px);
 }
@@ -369,7 +370,7 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
     margin-bottom: 20px;
   }
 
-  .content-card button {
+  .content-card .button {
     width: 100%;
     padding: 14px 24px;
     font-size: 16px;

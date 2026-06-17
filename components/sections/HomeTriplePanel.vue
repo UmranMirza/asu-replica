@@ -51,9 +51,9 @@
           </div>
 
           <div class="actions">
-            <button class="submit" @click="handleSubmit">Submit</button>
+            <RdsButton class="submit" size="large" @click="handleSubmit"> Submit </RdsButton>
 
-            <a href="#" @click.prevent="handleReset"> Reset </a>
+            <RdsButton class="reset-button" size="large" @click="handleReset"> Reset </RdsButton>
           </div>
 
           <a href="#" class="discover" @click.prevent="handleDiscover">

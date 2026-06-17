@@ -21,7 +21,8 @@
               <div class="slide-content">
                 <h3>{{ campus.name }}</h3>
 
-                <button>Visit</button>
+                <!-- <button class="button">Visit</button> -->
+                <RdsButton class="button" size="large"> Visit </RdsButton>
               </div>
             </div>
           </div>
@@ -167,11 +168,10 @@ const prevSlide = () => {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.1;
-
-  border-radius: 999px;
+  width: fit-content;
 }
 
-.slide-content button {
+.slide-content .button {
   align-self: flex-start;
 
   border: none;
@@ -192,7 +192,7 @@ const prevSlide = () => {
     background 0.2s ease;
 }
 
-.slide-content button:hover {
+.slide-content .button:hover {
   transform: translateY(-1px);
   background: #e6b30f;
 }
