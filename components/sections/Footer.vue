@@ -1,23 +1,25 @@
 <template>
-  <FooterStandard
-    :tertiary-items="tertiaryItems"
-    innovation-image-alt="Repeatedly ranked #1 on 30+ lists in the last 3 years"
-  >
-    <template #secondary-menu>
-      <nav class="nav grid-flex-menu" aria-label="Footer navigation">
-        <a
-          v-for="item in secondaryItems"
-          :key="item.text"
-          :href="item.uri"
-          :target="formatTarget(item.target)"
-          class="nav-link text-dark-3 menu-item fw-bold"
-          rel="noopener noreferrer"
-        >
-          {{ item.text }}
-        </a>
-      </nav>
-    </template>
-  </FooterStandard>
+  <ClientOnly>
+    <FooterStandard
+      :tertiary-items="tertiaryItems"
+      innovation-image-alt="Repeatedly ranked #1 on 30+ lists in the last 3 years"
+    >
+      <template #secondary-menu>
+        <nav class="nav grid-flex-menu" aria-label="Footer navigation">
+          <a
+            v-for="item in secondaryItems"
+            :key="item.text"
+            :href="item.uri"
+            :target="formatTarget(item.target)"
+            class="nav-link text-dark-3 menu-item fw-bold"
+            rel="noopener noreferrer"
+          >
+            {{ item.text }}
+          </a>
+        </nav>
+      </template>
+    </FooterStandard>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

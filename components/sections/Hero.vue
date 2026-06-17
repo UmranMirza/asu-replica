@@ -1,9 +1,11 @@
 <template>
-  <HeroVideoApollo
-    v-bind="heroProps"
-    @cta-click="handleCtaClick"
-    @toggle-video="handleToggleVideo"
-  />
+  <ClientOnly>
+    <HeroVideoApollo
+      v-bind="heroProps"
+      @cta-click="handleCtaClick"
+      @toggle-video="handleToggleVideo"
+    />
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">

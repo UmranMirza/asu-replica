@@ -1,9 +1,11 @@
 <template>
-  <HeaderStandard
-    :nav-items="items"
-    home-title="Arizona State University"
-    :display-rfi-cta="false"
-  />
+  <ClientOnly>
+    <HeaderStandard
+      :nav-items="items"
+      home-title="Arizona State University"
+      :display-rfi-cta="false"
+    />
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
