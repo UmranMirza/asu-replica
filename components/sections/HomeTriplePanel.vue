@@ -100,26 +100,72 @@
         <div class="future-panel">
           <h2>I am a future</h2>
 
-          <div class="tabs">
-            <button :class="{ active: futureTab === 'in-person' }" @click="futureTab = 'in-person'">
-              In Person
-            </button>
-
-            <button :class="{ active: futureTab === 'online' }" @click="futureTab = 'online'">
-              Online
-            </button>
-          </div>
-
-          <div class="future-links">
-            <a
-              v-for="link in currentFutureLinks"
-              :key="link"
-              href="#"
-              @click.prevent="handleFutureLink(link)"
+          <ClientOnly>
+            <TabCarouselAtlas
+              id="future-tabs"
+              :tabs="futureTabs"
+              title-size="large"
+              title-variant="dark-3"
+              tab-active-variant="primary"
+              tab-inactive-variant="dark-3"
+              hover-variant="primary"
+              :selected-tab="1"
+              :underline="true"
+              underline-position="bottom"
+              :show-tab-list-border="true"
+              tab-list-border-variant="light-4"
             >
-              {{ link }}
-            </a>
-          </div>
+              <template #tab(1)>
+                <div class="future-links">
+                  <a href="#" @click.prevent="handleFutureLink('First-year student')">
+                    First-year student
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Transfer student')">
+                    Transfer student
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Honors student')">
+                    Honors student
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Graduate student')">
+                    Graduate student
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('International student')">
+                    International student
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Veteran student')">
+                    Veteran student
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Non-degree student')">
+                    Non-degree student
+                  </a>
+                </div>
+              </template>
+
+              <template #tab(2)>
+                <div class="future-links">
+                  <a href="#" @click.prevent="handleFutureLink('Online undergraduate')">
+                    Online undergraduate
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Online graduate')">
+                    Online graduate
+                  </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Certificates')"> Certificates </a>
+
+                  <a href="#" @click.prevent="handleFutureLink('Continuing education')">
+                    Continuing education
+                  </a>
+                </div>
+              </template>
+            </TabCarouselAtlas>
+          </ClientOnly>
 
           <button class="spanish-btn" @click="handleSpanish">Aprender más en Español</button>
         </div>
@@ -129,8 +175,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref } from 'vue'
-
+import { onMounted, onUnmounted, ref } from 'vue'
+import { TabCarouselAtlas } from '@rds-vue-ui/tab-carousel-atlas'
 interface Slide {
   headline: string
   number: string
@@ -165,7 +211,6 @@ const slides: Slide[] = [
 
 const currentSlide = ref<number>(0)
 const isPlaying = ref<boolean>(true)
-const futureTab = ref<'in-person' | 'online'>('in-person')
 
 // Form state
 const searchMode = ref<'in-person' | 'online'>('in-person')
@@ -173,26 +218,14 @@ const keywordSearch = ref<string>('')
 const interestArea = ref<string>('')
 const degreeType = ref<'undergraduate' | 'graduate'>('undergraduate')
 
-const inPersonLinks: string[] = [
-  'First-year student',
-  'Transfer student',
-  'Honors student',
-  'Graduate student',
-  'International student',
-  'Veteran student',
-  'Non-degree student',
+const futureTabs = [
+  {
+    tabName: 'In Person',
+  },
+  {
+    tabName: 'Online',
+  },
 ]
-
-const onlineLinks: string[] = [
-  'Online undergraduate',
-  'Online graduate',
-  'Certificates',
-  'Continuing education',
-]
-
-const currentFutureLinks = computed<string[]>(() => {
-  return futureTab.value === 'in-person' ? inPersonLinks : onlineLinks
-})
 
 let interval: ReturnType<typeof setInterval> | null = null
 
@@ -271,13 +304,20 @@ onUnmounted(() => {
   background: #f3f3f3;
   padding: 4rem 0;
 }
-
+.future-panel :deep(.tab-panel) {
+  padding-top: 24px;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
+.tabs-list {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem !important;
+}
 .triple-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr;
@@ -513,38 +553,20 @@ select:focus {
   text-decoration: underline;
 }
 
-.tabs {
-  display: flex;
-  gap: 0;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #e0e0e0;
-}
-
-.tabs button {
-  background: none;
-  border: none;
-  border-bottom: 3px solid transparent;
-  padding: 0.75rem 1.5rem;
-  font-weight: 700;
-  cursor: pointer;
-  font-size: 0.95rem;
-  color: #333;
-  transition: all 0.2s;
-}
-
-.tabs button:hover {
-  color: #8c1d40;
-}
-
-.tabs button.active {
-  color: #8c1d40;
-  border-bottom-color: #8c1d40;
-}
-
 .future-links {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.future-links a {
+  color: #8c1d40;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.future-links a:hover {
+  text-decoration: underline;
 }
 
 .future-links a {

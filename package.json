@@ -25,6 +25,7 @@
     "@rds-vue-ui/hero-video-apollo": "^0.9.0",
     "@rds-vue-ui/rds-theme-base": "^0.7.2",
     "@rds-vue-ui/section-video-apollo": "^0.2.1",
+    "@rds-vue-ui/tab-carousel-atlas": "^0.2.0",
     "nuxt": "^4.4.8",
     "vue": "^3.5.35"
   },
