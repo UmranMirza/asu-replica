@@ -39,62 +39,38 @@
       </button>
     </div>
   </section> -->
-<section class="hero">
-  <!-- Desktop Video -->
-   <div class="overlay"></div>
+  <section class="hero">
+    <!-- Desktop Video -->
+    <div class="overlay" />
 
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>
-          Study at one of the most prestigious
-          research institutions in the nation
-        </h1>
+        <h1>Study at one of the most prestigious research institutions in the nation</h1>
 
         <p>
-          ASU is part of the Association of American Universities,
-          a highly selective group of top research institutions
-          that advocates for innovation, education and academic excellence.
+          ASU is part of the Association of American Universities, a highly selective group of top
+          research institutions that advocates for innovation, education and academic excellence.
         </p>
 
-        <button class="cta-button">
-          Find out more
-        </button>
+        <button class="cta-button">Find out more</button>
       </div>
 
-      <button
-        class="pause-button"
-        @click="toggleVideo"
-      >
+      <button class="pause-button" @click="toggleVideo">
         {{ isPlaying ? '❚❚' : '▶' }}
       </button>
     </div>
-  <video
-    v-if="!isMobile"
-    ref="videoRef"
-    autoplay
-    muted
-    loop
-    playsinline
-    class="hero-video"
-  >
-    <source src="/videos/hero.mp4" type="video/mp4" />
-  </video>
+    <video v-if="!isMobile" ref="videoRef" autoplay muted loop playsinline class="hero-video">
+      <source src="/videos/hero.mp4" type="video/mp4" />
+    </video>
 
-  <!-- Mobile Image -->
-   
-  <img
-  v-else
-  :src="mobileHeroImage"
-  alt="ASU Research"
-  class="hero-mobile-image"
-/>
+    <!-- Mobile Image -->
 
-  <div class="overlay"></div>
+    <img v-else :src="mobileHeroImage" alt="ASU Research" class="hero-mobile-image" />
 
-  <div class="container hero-content">
-    ...
-  </div>
-</section>
+    <div class="overlay" />
+
+    <div class="container hero-content">...</div>
+  </section>
 </template>
 
 <script setup>
@@ -102,8 +78,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const videoRef = ref(null)
 const isPlaying = ref(true)
-const mobileHeroImage =
-  'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80'
+const mobileHeroImage = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80'
 const isMobile = ref(false)
 
 const checkMobile = () => {
@@ -270,7 +245,6 @@ const toggleVideo = () => {
     bottom: -114px;
     left: 32px;
 
-
     height: 48px;
 
     padding: 0 28px;
@@ -283,54 +257,53 @@ const toggleVideo = () => {
   }
 
   .overlay {
-  position: absolute;
-  inset: 0;
+    position: absolute;
+    inset: 0;
 
-  background: rgba(0, 0, 0, 0.55);
-}
+    background: rgba(0, 0, 0, 0.55);
+  }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+  .hero-content {
+    position: relative;
+    z-index: 2;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
 
-.hero-text {
-  max-width: 700px;
+  .hero-text {
+    max-width: 700px;
 
-  color: white;
-}
+    color: white;
+  }
 
-.hero-text h1 {
-  font-size: 1.5rem;
-  line-height: 1.1;
+  .hero-text h1 {
+    font-size: 1.5rem;
+    line-height: 1.1;
 
-  margin-bottom: 2rem;
-}
+    margin-bottom: 2rem;
+  }
 
-.hero-text p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
+  .hero-text p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
 
-.cta-button {
-  margin-top: 2rem;
+  .cta-button {
+    margin-top: 2rem;
 
-  border: none;
-  border-radius: 999px;
+    border: none;
+    border-radius: 999px;
 
-  background: #ffc627;
+    background: #ffc627;
 
-  padding: 1rem 2rem;
+    padding: 1rem 2rem;
 
-  font-size: 1rem;
-  font-weight: 700;
+    font-size: 1rem;
+    font-weight: 700;
 
-  cursor: pointer;
-}
-
+    cursor: pointer;
+  }
 }
 </style>

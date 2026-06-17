@@ -1,37 +1,30 @@
 <template>
   <section class="cta-wrapper">
-  <section class="cta-section">
-    <div class="cta-container">
-      <div class="cta-card">
-        <h2>Carve your path</h2>
+    <section class="cta-section">
+      <div class="cta-container">
+        <div class="cta-card">
+          <h2>Carve your path</h2>
 
-        <p>
-          At Arizona State University, you'll join a community that will help
-          you explore your interests and learn new skills. Through quality
-          academics, enrichment opportunities and support from friends and
-          faculty, you'll graduate prepared to accomplish your goals throughout
-          your life.
-          <a href="#">Find the experience</a>
-          that fits you.
-        </p>
+          <p>
+            At Arizona State University, you'll join a community that will help you explore your
+            interests and learn new skills. Through quality academics, enrichment opportunities and
+            support from friends and faculty, you'll graduate prepared to accomplish your goals
+            throughout your life.
+            <a href="#">Find the experience</a>
+            that fits you.
+          </p>
 
-        <div class="cta-buttons">
-          <button class="cta-btn maroon">
-            Visit ASU
-          </button>
+          <div class="cta-buttons">
+            <button class="cta-btn maroon">Visit ASU</button>
 
-          <button class="cta-btn maroon">
-            Request information
-          </button>
+            <button class="cta-btn maroon">Request information</button>
 
-          <button class="cta-btn gold">
-            Apply now
-          </button>
+            <button class="cta-btn gold">Apply now</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
-</section>
 </template>
 
 <style scoped>
@@ -53,7 +46,7 @@
 
   overflow: hidden;
 
-  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2400&auto=format&fit=crop");
+  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2400&auto=format&fit=crop');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -78,7 +71,7 @@
 
   padding: 48px;
 
-  box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 
   display: flex;
   flex-direction: column;
@@ -129,7 +122,7 @@
 
   cursor: pointer;
 
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .cta-btn.maroon {

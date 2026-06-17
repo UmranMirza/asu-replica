@@ -3,14 +3,13 @@
     <LayoutHeader />
 
     <SectionsHero />
-    
+
     <SectionsHomeTriplePanel />
-   <SectionsStories />
-   <SectionsDifference />
-   <SectionsCTA />
-   <SectionsCampuses />
-   <SectionsAsuYou />
-   <SectionsFooter />
-    
+    <SectionsStories />
+    <SectionsDifference />
+    <SectionsCTA />
+    <SectionsCampuses />
+    <SectionsAsuYou />
+    <SectionsFooter />
   </div>
 </template>

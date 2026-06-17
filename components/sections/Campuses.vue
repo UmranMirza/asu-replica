@@ -6,26 +6,17 @@
       </h2>
 
       <div class="carousel">
-        <button class="nav prev" @click="prevSlide">
-          ‹
-        </button>
+        <button class="nav prev" @click="prevSlide">‹</button>
 
         <div class="viewport">
           <div
             class="track"
             :style="{
-              '--slide-offset': currentIndex
+              '--slide-offset': currentIndex,
             }"
           >
-            <div
-              v-for="campus in campuses"
-              :key="campus.name"
-              class="slide"
-            >
-              <img
-                :src="campus.image"
-                :alt="campus.name"
-              />
+            <div v-for="campus in campuses" :key="campus.name" class="slide">
+              <img :src="campus.image" :alt="campus.name" />
 
               <div class="slide-content">
                 <h3>{{ campus.name }}</h3>
@@ -36,14 +27,11 @@
           </div>
         </div>
 
-        <button class="nav next" @click="nextSlide">
-          ›
-        </button>
+        <button class="nav next" @click="nextSlide">›</button>
       </div>
     </div>
   </section>
 </template>
-
 
 <script setup lang="ts">
 import { ref } from 'vue'
@@ -74,17 +62,11 @@ const campuses = [
 const currentIndex = ref(1)
 
 const nextSlide = () => {
-  currentIndex.value =
-    currentIndex.value === campuses.length - 1
-      ? 0
-      : currentIndex.value + 1
+  currentIndex.value = currentIndex.value === campuses.length - 1 ? 0 : currentIndex.value + 1
 }
 
 const prevSlide = () => {
-  currentIndex.value =
-    currentIndex.value === 0
-      ? campuses.length - 1
-      : currentIndex.value - 1
+  currentIndex.value = currentIndex.value === 0 ? campuses.length - 1 : currentIndex.value - 1
 }
 </script>
 
@@ -143,7 +125,7 @@ const prevSlide = () => {
 
   overflow: hidden;
   border-radius: 24px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
 .slide img {
@@ -177,7 +159,7 @@ const prevSlide = () => {
 
   margin: 0;
 
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.95);
   color: #191919;
 
   padding: 14px 22px;
@@ -204,8 +186,10 @@ const prevSlide = () => {
   font-weight: 700;
 
   cursor: pointer;
-  box-shadow: 0 10px 18px rgba(0,0,0,0.16);
-  transition: transform 0.2s ease, background 0.2s ease;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.16);
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
 .slide-content button:hover {

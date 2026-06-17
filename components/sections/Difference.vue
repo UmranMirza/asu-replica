@@ -1,42 +1,31 @@
 <template>
   <section class="difference-section">
-   <div class="difference-header">
-  <div class="container">
-    <div class="difference-content">
-      <p class="eyebrow">
-        The ASU difference:
-      </p>
+    <div class="difference-header">
+      <div class="container">
+        <div class="difference-content">
+          <p class="eyebrow">The ASU difference:</p>
 
-      <h2 class="difference-title">
-        We are measured not by whom we exclude,
-        but by
-        <span>whom we include</span>
-        and
-        <span>how they succeed</span>
-      </h2>
+          <h2 class="difference-title">
+            We are measured not by whom we exclude, but by
+            <span>whom we include</span>
+            and
+            <span>how they succeed</span>
+          </h2>
 
-      <p class="charter">
-        — Excerpt from
-        <a href="#">ASU charter</a>
-      </p>
+          <p class="charter">
+            — Excerpt from
+            <a href="#">ASU charter</a>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="difference-grid">
-        <article
-          v-for="feature in features"
-          :key="feature.title"
-          class="difference-card"
-        >
-          <img
-            :src="feature.image"
-            :alt="feature.title"
-            class="card-image"
-          />
+    <div class="container">
+      <div class="difference-grid">
+        <article v-for="feature in features" :key="feature.title" class="difference-card">
+          <img :src="feature.image" :alt="feature.title" class="card-image" />
 
-          <div class="overlay"></div>
+          <div class="overlay" />
 
           <!-- Default Title -->
           <div class="card-title">
@@ -51,9 +40,7 @@
               {{ feature.description }}
             </p>
 
-            <button>
-              Learn more
-            </button>
+            <button>Learn more</button>
           </div>
         </article>
       </div>
@@ -72,7 +59,7 @@ const features = [
   {
     title: 'Discovery and innovation that serves the public',
     description:
-      "As ASU focuses on research and discovery of public value, the Knowledge Enterprise advances research, innovation, partnerships, entrepreneurship and technology transfer.",
+      'As ASU focuses on research and discovery of public value, the Knowledge Enterprise advances research, innovation, partnerships, entrepreneurship and technology transfer.',
     image: 'https://picsum.photos/800/600?random=8',
   },
   {
@@ -89,14 +76,14 @@ const features = [
    ASU Difference Quote Section
 ========================================== */
 .container {
-    max-width: 1248px;
-    margin: 0 auto;
-    padding: 100px 24px;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding: 100px 24px;
 }
 .difference-header {
   background: #f5f5f5;
 
- padding-top: 72px;
+  padding-top: 72px;
   padding-bottom: 48px;
 }
 
@@ -214,8 +201,8 @@ const features = [
   display: block;
 
   transition:
-    transform .5s ease,
-    filter .5s ease;
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 /* ==========================================
@@ -228,15 +215,14 @@ const features = [
 
   z-index: 1;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, .82) 0%,
-      rgba(0, 0, 0, .30) 45%,
-      rgba(0, 0, 0, 0) 75%
-    );
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.3) 45%,
+    rgba(0, 0, 0, 0) 75%
+  );
 
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 }
 
 /* ==========================================
@@ -253,8 +239,8 @@ const features = [
   z-index: 2;
 
   transition:
-    opacity .3s ease,
-    transform .3s ease;
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .card-title h3 {
@@ -279,9 +265,7 @@ const features = [
   left: 32px;
   right: 32px;
 
-  transform:
-    translateY(-50%)
-    scale(.96);
+  transform: translateY(-50%) scale(0.96);
 
   opacity: 0;
 
@@ -292,7 +276,7 @@ const features = [
   padding: 34px;
   box-sizing: border-box;
 
-  transition: all .35s ease;
+  transition: all 0.35s ease;
 }
 
 .card-content h3 {
@@ -329,7 +313,7 @@ const features = [
 
   cursor: pointer;
 
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 .card-content button:hover {
@@ -353,9 +337,7 @@ const features = [
 .difference-card:hover .card-content {
   opacity: 1;
 
-  transform:
-    translateY(-50%)
-    scale(1);
+  transform: translateY(-50%) scale(1);
 }
 
 /* ==========================================
@@ -443,7 +425,7 @@ const features = [
 
   .card-title h3 {
     font-size: 36px;
-        margin-bottom: 55px;
+    margin-bottom: 55px;
   }
 
   .card-content {

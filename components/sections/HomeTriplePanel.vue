@@ -10,41 +10,23 @@
 
           <div class="radio-group">
             <label>
-              <input
-                type="radio"
-                v-model="searchMode"
-                value="in-person"
-              >
+              <input v-model="searchMode" type="radio" value="in-person" />
               In person
             </label>
 
             <label>
-              <input
-                type="radio"
-                v-model="searchMode"
-                value="online"
-              >
+              <input v-model="searchMode" type="radio" value="online" />
               Online
             </label>
           </div>
 
-          <label class="label">
-            Search by keyword
-          </label>
+          <label class="label"> Search by keyword </label>
 
-          <input
-            v-model="keywordSearch"
-            type="text"
-            placeholder="Enter keywords"
-          >
+          <input v-model="keywordSearch" type="text" placeholder="Enter keywords" />
 
-          <div class="or">
-            OR
-          </div>
+          <div class="or">OR</div>
 
-          <label class="label">
-            Search by interest area
-          </label>
+          <label class="label"> Search by interest area </label>
 
           <select v-model="interestArea">
             <option value="">Select one...</option>
@@ -58,48 +40,29 @@
 
           <div class="radio-group">
             <label>
-              <input
-                type="radio"
-                v-model="degreeType"
-                value="undergraduate"
-              >
+              <input v-model="degreeType" type="radio" value="undergraduate" />
               Undergraduate
             </label>
 
             <label>
-              <input
-                type="radio"
-                v-model="degreeType"
-                value="graduate"
-              >
+              <input v-model="degreeType" type="radio" value="graduate" />
               Graduate
             </label>
           </div>
 
           <div class="actions">
-            <button class="submit" @click="handleSubmit">
-              Submit
-            </button>
+            <button class="submit" @click="handleSubmit">Submit</button>
 
-            <a href="#" @click.prevent="handleReset">
-              Reset
-            </a>
+            <a href="#" @click.prevent="handleReset"> Reset </a>
           </div>
 
-          <a
-            href="#"
-            class="discover"
-            @click.prevent="handleDiscover"
-          >
+          <a href="#" class="discover" @click.prevent="handleDiscover">
             Discover what's right for me
           </a>
         </div>
 
         <!-- Rankings Carousel -->
-        <div
-          class="ranking-panel"
-          :style="{ background: slides[currentSlide]?.bg }"
-        >
+        <div class="ranking-panel" :style="{ background: slides[currentSlide]?.bg }">
           <div class="ranking-content">
             <h2>
               {{ slides[currentSlide]?.headline }}
@@ -120,22 +83,16 @@
 
           <div class="ranking-footer">
             <div class="controls">
-              <button class="control-btn" @click="prevSlide">
-                ‹
-              </button>
+              <button class="control-btn" @click="prevSlide">‹</button>
 
               <button class="control-btn" @click="togglePlay">
                 {{ isPlaying ? '❚❚' : '▶' }}
               </button>
 
-              <button class="control-btn" @click="nextSlide">
-                ›
-              </button>
+              <button class="control-btn" @click="nextSlide">›</button>
             </div>
 
-            <a href="#" @click.prevent="handleViewRankings">
-              View all rankings
-            </a>
+            <a href="#" @click.prevent="handleViewRankings"> View all rankings </a>
           </div>
         </div>
 
@@ -144,17 +101,11 @@
           <h2>I am a future</h2>
 
           <div class="tabs">
-            <button
-              :class="{ active: futureTab === 'in-person' }"
-              @click="futureTab = 'in-person'"
-            >
+            <button :class="{ active: futureTab === 'in-person' }" @click="futureTab = 'in-person'">
               In Person
             </button>
 
-            <button
-              :class="{ active: futureTab === 'online' }"
-              @click="futureTab = 'online'"
-            >
+            <button :class="{ active: futureTab === 'online' }" @click="futureTab = 'online'">
               Online
             </button>
           </div>
@@ -170,9 +121,7 @@
             </a>
           </div>
 
-          <button class="spanish-btn" @click="handleSpanish">
-            Aprender más en Español
-          </button>
+          <button class="spanish-btn" @click="handleSpanish">Aprender más en Español</button>
         </div>
       </div>
     </div>
@@ -291,7 +240,7 @@ const handleReset = (): void => {
 }
 
 const handleDiscover = (): void => {
-  console.log('Discover what\'s right for me clicked')
+  console.log("Discover what's right for me clicked")
 }
 
 const handleViewRankings = (): void => {
@@ -354,7 +303,7 @@ onUnmounted(() => {
   background: #f9f9f9;
 }
 
-.degree-panel h2{
+.degree-panel h2 {
   font-size: 1.25rem;
   font-weight: 900;
   margin: 0 0 1.5rem 0;
@@ -482,7 +431,7 @@ select:focus {
 }
 
 .ranking-panel {
-  background: #FFC627;
+  background: #ffc627;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

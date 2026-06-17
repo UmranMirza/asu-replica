@@ -10,7 +10,7 @@
 
         <button class="search-btn">
           Search
-          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-magnifying-glass" />
         </button>
       </div>
     </div>
@@ -24,33 +24,20 @@
             <div class="text-logo">
               <div class="asu-text">ASU</div>
 
-              <div class="asu-subtitle">
-                Arizona State University
-              </div>
+              <div class="asu-subtitle">Arizona State University</div>
             </div>
 
-            <a
-              href="#"
-              class="university-name"
-            >
-              Arizona State University
-            </a>
+            <a href="#" class="university-name"> Arizona State University </a>
           </div>
 
-         <button
-  class="menu-button"
-  @click="mobileMenuOpen = !mobileMenuOpen"
->
-  {{ mobileMenuOpen ? '✕' : '☰' }}
-</button>
+          <button class="menu-button" @click="mobileMenuOpen = !mobileMenuOpen">
+            {{ mobileMenuOpen ? '✕' : '☰' }}
+          </button>
         </div>
 
         <nav class="main-nav">
-          <a
-            href="#"
-            class="active home-link"
-          >
-            <i class="fa-solid fa-house"></i>
+          <a href="#" class="active home-link">
+            <i class="fa-solid fa-house" />
           </a>
 
           <a href="#">News and Events</a>
@@ -75,16 +62,10 @@
           </div>
           <div class="mobile-university-name">Arizona State University</div>
         </div>
-        <input 
-          type="text" 
-          class="mobile-search" 
-          placeholder="Search asu.edu"
-        >
+        <input type="text" class="mobile-search" placeholder="Search asu.edu" />
       </div>
 
-      <a href="#" class="mobile-nav-item home-link-mobile">
-        Home
-      </a>
+      <a href="#" class="mobile-nav-item home-link-mobile"> Home </a>
       <a href="#" class="mobile-nav-item">News and Events</a>
       <a href="#" class="mobile-nav-item">Academics</a>
       <a href="#" class="mobile-nav-item">Admission</a>
@@ -144,12 +125,12 @@ header {
   z-index: 9999;
 
   transition:
-    box-shadow .25s ease,
-    transform .25s ease;
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 header.scrolled {
-  box-shadow: 0 3px 14px rgba(0,0,0,.14);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.14);
 }
 
 /* Utility */
@@ -215,7 +196,7 @@ header.scrolled {
   align-items: center;
   justify-content: space-between;
 
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 header.scrolled .logo-row {
@@ -230,7 +211,7 @@ header.scrolled .logo-row {
 .text-logo {
   width: 86px;
 
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 header.scrolled .text-logo {
@@ -245,9 +226,9 @@ header.scrolled .text-logo {
 
   letter-spacing: -3px;
 
-  line-height: .9;
+  line-height: 0.9;
 
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 header.scrolled .asu-text {
@@ -273,7 +254,7 @@ header.scrolled .asu-text {
   font-size: 30px;
   font-weight: 700;
 
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .university-name:hover {
@@ -299,7 +280,7 @@ header.scrolled .university-name {
 
 .main-nav {
   height: 48px;
-   padding-left: 109px;
+  padding-left: 109px;
   display: flex;
   align-items: center;
 
@@ -308,7 +289,7 @@ header.scrolled .university-name {
 
 header.scrolled .main-nav {
   height: 38px;
-   padding-left: 90px;
+  padding-left: 90px;
 }
 
 .main-nav a {
@@ -333,7 +314,7 @@ header.scrolled .main-nav {
 }
 
 .main-nav a::after {
-  content: "";
+  content: '';
 
   position: absolute;
 
@@ -347,7 +328,7 @@ header.scrolled .main-nav {
 
   transform: scaleX(0);
 
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
 
 .main-nav a:hover::after,
@@ -481,8 +462,8 @@ header.scrolled .main-nav {
 }
 
 .home-link-mobile::after {
-  content: "";
-  
+  content: '';
+
   position: absolute;
   bottom: 0;
   left: 24px;
@@ -570,35 +551,35 @@ header.scrolled .main-nav {
 }
 
 @media (max-width: 768px) {
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-  width: 100%;
+    width: 100%;
 
-  background: #fff;
+    background: #fff;
 
-  z-index: 99999; /* was 9999 */
-}
-.menu-button {
-  display: none;
+    z-index: 99999; /* was 9999 */
+  }
+  .menu-button {
+    display: none;
 
-  position: relative;
-  z-index: 100000;
-  pointer-events: auto;
-}
-.university-name:hover {
-  text-decoration: underline;
+    position: relative;
+    z-index: 100000;
+    pointer-events: auto;
+  }
+  .university-name:hover {
+    text-decoration: underline;
 
-  text-decoration-color: #191919;
+    text-decoration-color: #191919;
 
-  text-underline-offset: 3px;
-}
+    text-underline-offset: 3px;
+  }
 
-header.scrolled .university-name {
-  font-size: 16px;
-}
+  header.scrolled .university-name {
+    font-size: 16px;
+  }
   .utility-bar {
     display: none;
   }

@@ -2,7 +2,7 @@
   <section
     class="asu-you-section"
     :style="{
-      backgroundImage: `url(${bgImage})`
+      backgroundImage: `url(${bgImage})`,
     }"
   >
     <!-- Decorative Typography -->
@@ -16,24 +16,13 @@
       <div class="asu-logo-text">
         <span class="asu-text">ASU</span>
 
-        <svg
-          class="for-curve"
-          viewBox="0 0 140 100"
-        >
+        <svg class="for-curve" viewBox="0 0 140 100">
           <defs>
-            <path
-              id="forPath"
-              d="M15,10 C55,20 75,55 95,100"
-            />
+            <path id="forPath" d="M15,10 C55,20 75,55 95,100" />
           </defs>
 
           <text>
-            <textPath
-              href="#forPath"
-              startOffset="0%"
-            >
-              for
-            </textPath>
+            <textPath href="#forPath" startOffset="0%">for</textPath>
           </text>
         </svg>
       </div>
@@ -45,40 +34,29 @@
 
     <!-- Content Card -->
     <div class="content-card">
-      <h2>
-        Reimagining education for everyone
-      </h2>
+      <h2>Reimagining education for everyone</h2>
 
-      <span class="tag">
-        New programs for all ages
-      </span>
+      <span class="tag"> New programs for all ages </span>
 
       <p>
-        Ambition, curiosity, creativity and passion don't fit in any one box.
-        No matter who you are or how you learn, ASU is ready to serve learners
-        at every stage of life.
+        Ambition, curiosity, creativity and passion don't fit in any one box. No matter who you are
+        or how you learn, ASU is ready to serve learners at every stage of life.
       </p>
 
       <p>
-        ASU for You is the first step in a larger movement that is breaking
-        down education barriers and building up high quality, affordable and
-        accessible learning opportunities for everyone, from K-12 to
-        midcareer to postretirement and every individual in between.
+        ASU for You is the first step in a larger movement that is breaking down education barriers
+        and building up high quality, affordable and accessible learning opportunities for everyone,
+        from K-12 to midcareer to postretirement and every individual in between.
       </p>
 
-      <button>
-        Learn more
-      </button>
+      <button>Learn more</button>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-const bgImage =
-  'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=2000&q=80'
+const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=2000&q=80'
 </script>
-
-
 
 <style scoped>
 .asu-you-section {

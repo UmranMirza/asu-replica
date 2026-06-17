@@ -3,34 +3,34 @@
     <!-- Top Dark Section -->
     <div class="footer-top">
       <div class="footer-container top-content">
-<div class="logo-section">
-  <div class="asu-footer-brand">
-    <span class="asu-brand">ASU</span>
+        <div class="logo-section">
+          <div class="asu-footer-brand">
+            <span class="asu-brand">ASU</span>
 
-    <div class="asu-brand-text">
-      <span>Arizona State</span>
-      <span>University</span>
-    </div>
-  </div>
-</div>
+            <div class="asu-brand-text">
+              <span>Arizona State</span>
+              <span>University</span>
+            </div>
+          </div>
+        </div>
 
-       <div class="social-links">
-  <a href="#" aria-label="Facebook">
-    <i class="fa-brands fa-facebook-f"></i>
-  </a>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f" />
+          </a>
 
-  <a href="#" aria-label="Instagram">
-    <i class="fa-brands fa-instagram"></i>
-  </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" />
+          </a>
 
-  <a href="#" aria-label="YouTube">
-    <i class="fa-brands fa-youtube"></i>
-  </a>
+          <a href="#" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" />
+          </a>
 
-  <a href="#" aria-label="LinkedIn">
-    <i class="fa-brands fa-linkedin-in"></i>
-  </a>
-</div>
+          <a href="#" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in" />
+          </a>
+        </div>
       </div>
     </div>
 
@@ -47,18 +47,12 @@
 
         <div class="ranking">
           <div>
-            <div class="ranking-title">
-              Repeatedly ranked
-            </div>
+            <div class="ranking-title">Repeatedly ranked</div>
 
-            <div class="ranking-subtitle">
-              30+ lists in the last 3 years
-            </div>
+            <div class="ranking-subtitle">30+ lists in the last 3 years</div>
           </div>
 
-          <div class="ranking-badge">
-            #1
-          </div>
+          <div class="ranking-badge">#1</div>
         </div>
       </div>
     </div>
@@ -120,11 +114,11 @@
   font-size: 32px;
   text-decoration: none;
 
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .social-links a:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 /* ==========================
@@ -369,4 +363,3 @@
   }
 }
 </style>
-

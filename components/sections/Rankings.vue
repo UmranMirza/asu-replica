@@ -7,11 +7,7 @@
       </div>
 
       <div class="rankings-grid">
-        <div
-          v-for="item in rankings"
-          :key="item.title"
-          class="ranking-card"
-        >
+        <div v-for="item in rankings" :key="item.title" class="ranking-card">
           <h3>{{ item.number }}</h3>
 
           <h4>{{ item.title }}</h4>
@@ -34,26 +30,22 @@ const rankings: Ranking[] = [
   {
     number: '#1',
     title: 'Innovation',
-    description:
-      'Recognized for innovation among universities.',
+    description: 'Recognized for innovation among universities.',
   },
   {
     number: 'Top 10',
     title: 'Research Institution',
-    description:
-      'Leading research and academic excellence.',
+    description: 'Leading research and academic excellence.',
   },
   {
     number: '#1',
     title: 'Online Programs',
-    description:
-      'Highly ranked online education programs.',
+    description: 'Highly ranked online education programs.',
   },
   {
     number: '90%',
     title: 'Employability',
-    description:
-      'Graduates succeed in their careers.',
+    description: 'Graduates succeed in their careers.',
   },
 ]
 </script>

@@ -1,21 +1,12 @@
 <template>
   <section class="stories-section">
     <div class="container">
-      <h2 class="stories-title">
-        Stories of excellence
-      </h2>
+      <h2 class="stories-title">Stories of excellence</h2>
 
       <div class="stories-grid">
-        <article
-          v-for="story in stories"
-          :key="story.title"
-          class="story-card"
-        >
+        <article v-for="story in stories" :key="story.title" class="story-card">
           <div class="image-wrapper">
-            <img
-              :src="story.image"
-              :alt="story.title"
-            />
+            <img :src="story.image" :alt="story.title" />
           </div>
 
           <div class="story-content">
