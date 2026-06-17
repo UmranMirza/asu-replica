@@ -256,7 +256,7 @@ const toggleVideo = () => {
     line-height: 1.06;
 
     margin-bottom: 20px;
-
+    margin-top: 6rem;
     font-weight: 700;
   }
 
@@ -266,6 +266,10 @@ const toggleVideo = () => {
 
   .cta-button {
     margin-top: 0;
+    position: absolute;
+    bottom: -114px;
+    left: 32px;
+
 
     height: 48px;
 

@@ -190,4 +190,68 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .cta-wrapper {
+    padding: 40px 0;
+  }
+
+  .cta-section {
+    height: auto;
+    padding: 40px 0;
+
+    background-attachment: scroll;
+  }
+
+  .cta-container {
+    padding: 0 16px;
+  }
+
+  .cta-card {
+    width: 100%;
+    min-height: auto;
+
+    padding: 24px 20px;
+
+    background: #ffffff;
+  }
+
+  .cta-card h2 {
+    margin: 0 0 16px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .cta-card p {
+    margin: 0 0 20px;
+
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cta-card p a {
+    font-size: 14px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-btn {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 24px;
+
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .cta-btn:hover {
+    transform: none;
+  }
+}
 </style>

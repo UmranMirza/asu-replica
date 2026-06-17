@@ -14,7 +14,7 @@
           <div
             class="track"
             :style="{
-              transform: `translateX(calc(-${currentIndex * 80}% - ${currentIndex * 24}px))`
+              '--slide-offset': currentIndex
             }"
           >
             <div
@@ -30,7 +30,7 @@
               <div class="slide-content">
                 <h3>{{ campus.name }}</h3>
 
-                <button>Virtual tour</button>
+                <button>Visit</button>
               </div>
             </div>
           </div>
@@ -131,6 +131,7 @@ const prevSlide = () => {
   gap: 24px;
 
   transition: transform 0.5s ease;
+  transform: translateX(calc(-1 * var(--slide-offset) * 80% - var(--slide-offset) * 24px));
 }
 
 .slide {
@@ -141,6 +142,8 @@ const prevSlide = () => {
   height: 620px;
 
   overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
 }
 
 .slide img {
@@ -149,31 +152,45 @@ const prevSlide = () => {
 
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.slide:hover img {
+  transform: scale(1.03);
 }
 
 .slide-content {
   position: absolute;
 
-  left: 36px;
-  bottom: 36px;
+  left: 32px;
+  bottom: 32px;
+  right: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .slide-content h3 {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 
-  margin: 0 0 20px;
+  margin: 0;
 
-  background: white;
+  background: rgba(255,255,255,0.95);
   color: #191919;
 
-  padding: 8px 14px;
+  padding: 14px 22px;
 
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 700;
+  line-height: 1.1;
+
+  border-radius: 999px;
 }
 
 .slide-content button {
-  display: block;
+  align-self: flex-start;
 
   border: none;
   border-radius: 999px;
@@ -187,6 +204,13 @@ const prevSlide = () => {
   font-weight: 700;
 
   cursor: pointer;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.16);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.slide-content button:hover {
+  transform: translateY(-1px);
+  background: #e6b30f;
 }
 
 .nav {
@@ -253,6 +277,67 @@ const prevSlide = () => {
     height: 48px;
 
     font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .campus-section {
+    padding-bottom: 40px;
+  }
+
+  .section-title {
+    padding: 0 16px;
+  }
+
+  .section-title span {
+    font-size: 30px;
+  }
+
+  .carousel {
+    padding: 0 16px;
+  }
+
+  .viewport {
+    overflow: hidden;
+  }
+
+  .track {
+    gap: 0;
+    transform: translateX(calc(-1 * var(--slide-offset) * 100%));
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    height: 320px;
+    max-width: 100%;
+  }
+
+  .slide-content {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .slide-content h3 {
+    font-size: 24px;
+  }
+
+  .slide-content button {
+    padding: 12px 22px;
+    font-size: 14px;
+  }
+
+  .nav {
+    width: 42px;
+    height: 42px;
+    font-size: 28px;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
   }
 }
 </style>

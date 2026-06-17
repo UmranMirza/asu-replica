@@ -443,17 +443,33 @@ const features = [
 
   .card-title h3 {
     font-size: 36px;
+        margin-bottom: 55px;
   }
 
   .card-content {
+    display: block;
+    top: auto;
+    bottom: 24px;
     left: 24px;
     right: 24px;
-
-    padding: 28px;
+    transform: none;
+    opacity: 1;
+    background: transparent;
+    padding: 0;
   }
 
-  .card-content h3 {
-    font-size: 32px;
+  .card-content h3,
+  .card-content p {
+    display: none;
+  }
+
+  .card-content button {
+    display: inline-flex;
+    margin: 0;
+    background: #ffc627;
+    color: #000;
+    padding: 14px 24px;
+    border-radius: 999px;
   }
 }
 </style>

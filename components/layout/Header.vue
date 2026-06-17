@@ -41,7 +41,7 @@
   class="menu-button"
   @click="mobileMenuOpen = !mobileMenuOpen"
 >
-  ☰
+  {{ mobileMenuOpen ? '✕' : '☰' }}
 </button>
         </div>
 
@@ -65,6 +65,43 @@
         </nav>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
+    <nav v-if="mobileMenuOpen" class="mobile-nav">
+      <div class="mobile-nav-header">
+        <div class="mobile-logo-section">
+          <div class="mobile-text-logo">
+            <div class="mobile-asu-text">ASU</div>
+          </div>
+          <div class="mobile-university-name">Arizona State University</div>
+        </div>
+        <input 
+          type="text" 
+          class="mobile-search" 
+          placeholder="Search asu.edu"
+        >
+      </div>
+
+      <a href="#" class="mobile-nav-item home-link-mobile">
+        Home
+      </a>
+      <a href="#" class="mobile-nav-item">News and Events</a>
+      <a href="#" class="mobile-nav-item">Academics</a>
+      <a href="#" class="mobile-nav-item">Admission</a>
+      <a href="#" class="mobile-nav-item">Research</a>
+      <a href="#" class="mobile-nav-item">Athletics</a>
+      <a href="#" class="mobile-nav-item">Alumni</a>
+      <a href="#" class="mobile-nav-item">Giving</a>
+      <a href="#" class="mobile-nav-item">President</a>
+      <a href="#" class="mobile-nav-item">About ASU</a>
+
+      <div class="mobile-nav-footer">
+        <a href="#" class="mobile-footer-item">ASU Home</a>
+        <a href="#" class="mobile-footer-item">My ASU</a>
+        <a href="#" class="mobile-footer-item">Colleges and Schools</a>
+        <a href="#" class="mobile-footer-item">Sign In</a>
+      </div>
+    </nav>
   </header>
 </template>
 
@@ -337,33 +374,162 @@ header.scrolled .main-nav {
 .mobile-nav {
   position: fixed;
 
-  top: 88px; /* below mobile header */
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
 
   background: white;
 
   z-index: 99998;
 
-  border-top: 1px solid #ddd;
+  overflow-y: auto;
 
-  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 15px;
 }
 
-.mobile-nav a {
+.mobile-nav-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 16px;
+
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-text-logo {
+  width: 65px;
+}
+
+.mobile-asu-text {
+  color: #8c1d40;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 0.9;
+}
+
+.mobile-university-name {
+  color: #191919;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.mobile-search {
+  flex: 1;
+
+  padding: 12px 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 0;
+
+  font-size: 14px;
+
+  outline: none;
+
+  background: #f9f9f9;
+}
+
+.mobile-search:focus {
+  border-color: #8c1d40;
+  background: white;
+}
+
+.mobile-close-btn {
+  display: none;
+}
+
+.mobile-nav-item {
   display: block;
 
-  padding: 18px 24px;
+  padding: 16px 24px;
 
   color: #191919;
 
   text-decoration: none;
 
   border-bottom: 1px solid #eee;
+
+  font-size: 16px;
+
+  transition: background 0.2s ease;
+
+  position: relative;
 }
 
-.mobile-nav a:hover {
+.mobile-nav-item:hover {
   background: #f7f7f7;
+}
+
+.home-link-mobile {
+  border-bottom: 4px solid #ffc627;
+
+  padding-bottom: 12px;
+
+  padding-top: 12px;
+}
+
+.home-link-mobile::after {
+  content: "";
+  
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+
+  height: 4px;
+
+  background: #ffc627;
+}
+
+.mobile-nav-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+
+  background: #e5e5e5;
+
+  margin-top: auto;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.mobile-footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 12px;
+
+  background: #f0f0f0;
+
+  color: #191919;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: center;
+
+  transition: background 0.2s ease;
+
+  border: 1px solid #e5e5e5;
+}
+
+.mobile-footer-item:hover {
+  background: #e8e8e8;
 }
 @media (max-width: 992px) {
   .utility-bar {
@@ -375,6 +541,7 @@ header.scrolled .main-nav {
   }
 
   .menu-button {
+    scroll-behavior: none;
     display: block;
 
     border: none;
@@ -419,7 +586,6 @@ header {
 
   position: relative;
   z-index: 100000;
-
   pointer-events: auto;
 }
 .university-name:hover {
@@ -480,7 +646,8 @@ header.scrolled .university-name {
 
     font-size: 30px;
 
-    padding: 0;
+    padding-left: 32px;
+    padding-right: 20px;
 
     cursor: pointer;
   }

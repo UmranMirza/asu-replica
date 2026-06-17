@@ -365,4 +365,36 @@ const bgImage =
     font-size: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .asu-you-section {
+    padding: 40px 16px;
+  }
+
+  .content-card {
+    padding: 24px 20px;
+  }
+
+  .content-card h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .content-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .content-card button {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
 </style>

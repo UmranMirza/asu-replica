@@ -322,9 +322,19 @@
     padding: 0 20px;
   }
 
+  .top-content,
+  .middle-content {
+    gap: 16px;
+  }
+
+  .social-links {
+    gap: 18px;
+  }
+
   .quick-links,
   .legal-links {
     gap: 18px;
+    justify-content: center;
   }
 
   .quick-links a,
@@ -338,6 +348,24 @@
 
   .ranking-subtitle {
     font-size: 14px;
+  }
+
+  .ranking-badge {
+    width: 46px;
+    height: 46px;
+    font-size: 30px;
+  }
+
+  .asu-brand {
+    font-size: 48px;
+  }
+
+  .asu-brand-text {
+    font-size: 20px;
+  }
+
+  .social-links a {
+    font-size: 24px;
   }
 }
 </style>
