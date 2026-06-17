@@ -133,7 +133,7 @@ lint-staged ensures that only staged files are linted and formatted during commi
 
 ---
 
-## Accessibility Considerations
+## Acc### Live Demoessibility Considerations
 The project includes several accessibility enhancements:
 
 - Semantic HTML where appropriate.
@@ -185,6 +185,18 @@ https://github.com/UmranMirza/asu-replica
 https://asu-replica.vercel.app/
 ```
 
+### ScreenShots
+
+### Desktop View
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
 
 
 ## Assumptions
@@ -213,5 +225,4 @@ Given additional time, the following enhancements could be implemented:
 ---
 
 ## Author
-Developed by ## Mohd Umranuddin ## as part of the ASU homepage implementation assignment.
-
+Developed by **Mohd Umranuddin** as part of the ASU homepage implementation assignment.
