@@ -116,61 +116,11 @@ const handleStoryClick = (story: (typeof stories)[number]) => {
   gap: 18px;
 }
 
-.story-card {
-  cursor: pointer;
-}
-
-.image-wrapper {
-  overflow: hidden;
-}
-
-.image-wrapper img {
-  width: 100%;
-  height: 240px;
-
-  object-fit: cover;
-
-  transition: transform 0.5s ease;
-}
-
-.story-content {
-  position: relative;
-
-  width: calc(100% - 32px);
-
-  margin: -32px auto 0;
-
-  padding: 20px 18px;
-
-  background: white;
-
-  transition: all 0.3s ease;
-}
-
-.story-content h3 {
-  margin: 0 0 12px;
-
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.story-content p {
-  margin: 0;
-
+.story-description {
   font-size: 16px;
   line-height: 1.6;
-
   color: #191919;
-}
-
-/* Hover Effects */
-.story-card:hover .image-wrapper img {
-  transform: scale(1.08);
-}
-
-.story-card:hover .story-content {
-  transform: translateY(-8px);
+  margin: 0;
 }
 
 @media (max-width: 992px) {
@@ -180,10 +130,6 @@ const handleStoryClick = (story: (typeof stories)[number]) => {
 
   .stories-title {
     font-size: 38px;
-  }
-
-  .story-content h3 {
-    font-size: 22px;
   }
 }
 </style>

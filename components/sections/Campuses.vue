@@ -222,10 +222,14 @@ const prevSlide = () => {
 }
 
 .prev {
+  padding-left: 19px;
   left: 14px;
+  padding-top: 3px;
 }
 
 .next {
+  padding-left: 19px;
+  padding-top: 3px;
   right: 14px;
 }
 
@@ -318,10 +322,14 @@ const prevSlide = () => {
 
   .prev {
     left: 10px;
+    padding-left: 14px;
+    padding-top: 4px;
   }
 
   .next {
     right: 10px;
+    padding-left: 18px;
+    padding-top: 4px;
   }
 }
 </style>

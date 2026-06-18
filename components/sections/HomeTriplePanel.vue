@@ -312,12 +312,6 @@ onUnmounted(() => {
   margin: 0 auto;
   padding: 0 1rem;
 }
-
-.tabs-list {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem !important;
-}
 .triple-grid {
   display: grid;
   grid-template-columns: 1fr 1.4fr 1fr;

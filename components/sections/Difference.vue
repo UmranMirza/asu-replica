@@ -150,24 +150,6 @@ const handleLearnMore = (feature: (typeof features)[number]) => {
 }
 
 /* ==========================================
-   Cards Wrapper
-========================================== */
-
-.difference-cards {
-  background: #f5f5f5;
-
-  padding-top: 48px;
-  /* padding-bottom: 100px; */
-}
-
-.difference-cards .container {
-  max-width: 1240px;
-
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* ==========================================
    Grid
 ========================================== */
 
@@ -177,172 +159,6 @@ const handleLearnMore = (feature: (typeof features)[number]) => {
   grid-template-columns: repeat(3, 1fr);
 
   gap: 28px;
-}
-
-/* ==========================================
-   Card
-========================================== */
-
-.difference-card {
-  position: relative;
-
-  overflow: hidden;
-
-  width: 100%;
-  height: 620px;
-
-  cursor: pointer;
-}
-
-/* ==========================================
-   Image
-========================================== */
-
-.card-image {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  display: block;
-
-  transition:
-    transform 0.5s ease,
-    filter 0.5s ease;
-}
-
-/* ==========================================
-   Dark Gradient Overlay
-========================================== */
-
-.overlay {
-  position: absolute;
-  inset: 0;
-
-  z-index: 1;
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.82) 0%,
-    rgba(0, 0, 0, 0.3) 45%,
-    rgba(0, 0, 0, 0) 75%
-  );
-
-  transition: opacity 0.3s ease;
-}
-
-/* ==========================================
-   Bottom Title
-========================================== */
-
-.card-title {
-  position: absolute;
-
-  left: 36px;
-  right: 36px;
-  bottom: 38px;
-
-  z-index: 2;
-
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease;
-}
-
-.card-title h3 {
-  margin: 0;
-
-  color: white;
-
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -1px;
-}
-
-/* ==========================================
-   Hover White Panel
-========================================== */
-
-.card-content {
-  position: absolute;
-
-  top: 50%;
-  left: 32px;
-  right: 32px;
-
-  transform: translateY(-50%) scale(0.96);
-
-  opacity: 0;
-
-  z-index: 3;
-
-  background: white;
-
-  padding: 34px;
-  box-sizing: border-box;
-
-  transition: all 0.35s ease;
-}
-
-.card-content h3 {
-  margin: 0 0 24px;
-
-  color: #191919;
-
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.card-content p {
-  margin: 0 0 28px;
-
-  color: #191919;
-
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.card-content button {
-  border: none;
-  border-radius: 999px;
-
-  background: #ffc627;
-  color: #000;
-
-  padding: 14px 24px;
-
-  font-size: 15px;
-  font-weight: 700;
-
-  cursor: pointer;
-
-  transition: all 0.2s ease;
-}
-
-.card-content button:hover {
-  background: #f2b600;
-}
-
-/* ==========================================
-   Hover Effects
-========================================== */
-
-.difference-card:hover .card-image {
-  transform: scale(1.06);
-}
-
-.difference-card:hover .card-title {
-  opacity: 0;
-
-  transform: translateY(12px);
-}
-
-.difference-card:hover .card-content {
-  opacity: 1;
-
-  transform: translateY(-50%) scale(1);
 }
 
 /* ==========================================
@@ -362,18 +178,6 @@ const handleLearnMore = (feature: (typeof features)[number]) => {
   .difference-content {
     max-width: 920px;
   }
-
-  .difference-card {
-    height: 560px;
-  }
-
-  .card-title h3 {
-    font-size: 28px;
-  }
-
-  .card-content h3 {
-    font-size: 36px;
-  }
 }
 
 /* ==========================================
@@ -386,8 +190,7 @@ const handleLearnMore = (feature: (typeof features)[number]) => {
     padding-bottom: 64px;
   }
 
-  .difference-header .container,
-  .difference-cards .container {
+  .difference-header .container {
     padding: 0 24px;
   }
 
@@ -409,54 +212,8 @@ const handleLearnMore = (feature: (typeof features)[number]) => {
     font-size: 15px;
   }
 
-  .difference-cards {
-    padding-top: 64px;
-    padding-bottom: 80px;
-  }
-
   .difference-grid {
     grid-template-columns: 1fr;
-  }
-
-  .difference-card {
-    height: 520px;
-  }
-
-  .card-title {
-    left: 24px;
-    right: 24px;
-    bottom: 28px;
-  }
-
-  .card-title h3 {
-    font-size: 36px;
-    margin-bottom: 55px;
-  }
-
-  .card-content {
-    display: block;
-    top: auto;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
-    transform: none;
-    opacity: 1;
-    background: transparent;
-    padding: 0;
-  }
-
-  .card-content h3,
-  .card-content p {
-    display: none;
-  }
-
-  .card-content button {
-    display: inline-flex;
-    margin: 0;
-    background: #ffc627;
-    color: #000;
-    padding: 14px 24px;
-    border-radius: 999px;
   }
 }
 </style>
