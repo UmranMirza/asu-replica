@@ -22,27 +22,28 @@
 
     <div class="container">
       <div class="difference-grid">
-        <CardImageTile
-          v-for="feature in features"
-          :key="feature.title"
-          :bg-image-src="feature.image"
-          :title="feature.title"
-          :text="feature.description"
-          cta-text="Learn more"
-          cta-link="#"
-          title-size="xl"
-          title-variant="white"
-          text-size="medium"
-          text-variant="dark-3"
-          :display-gradient="true"
-          :gradient-opacity="0.85"
-          :display-cta="true"
-          :display-cta-button="true"
-          cta-button-mobile-variant="secondary"
-          cta-button-desktop-variant="secondary"
-          :clickable-card="true"
-          @click="handleLearnMore(feature)"
-        />
+        <ClientOnly>
+          <CardImageTile
+            v-for="feature in features"
+            :key="feature.title"
+            :bg-image-src="feature.image"
+            :title="feature.title"
+            :text="feature.description"
+            cta-text="Learn more"
+            cta-link="#"
+            title-size="xl"
+            title-variant="white"
+            text-size="medium"
+            text-variant="dark-3"
+            :display-gradient="true"
+            :gradient-opacity="0.85"
+            :display-cta="true"
+            :display-cta-button="true"
+            cta-button-mobile-variant="secondary"
+            cta-button-desktop-variant="secondary"
+            :clickable-card="true"
+            @click="handleLearnMore(feature)"
+        /></ClientOnly>
       </div>
     </div>
   </section>
