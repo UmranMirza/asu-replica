@@ -4,28 +4,30 @@
       <h2 class="stories-title">Stories of excellence</h2>
 
       <div class="stories-grid">
-        <CardImageArticle
-          v-for="story in stories"
-          :key="story.title"
-          :image-source="story.image"
-          :image-alt="story.title"
-          :title="story.title"
-          :date="story.date"
-          :minutes="story.minutes"
-          :cta-link="story.link"
-          cta-text="Read more"
-          title-level="h3"
-          title-size="medium"
-          title-variant="dark-3"
-          bg-variant="white"
-          :display-border="true"
-          :display-label-text="false"
-          @cta-click="handleStoryClick(story)"
+        <ClientOnly>
+          <CardImageArticle
+            v-for="story in stories"
+            :key="story.title"
+            :image-source="story.image"
+            :image-alt="story.title"
+            :title="story.title"
+            :date="story.date"
+            :minutes="story.minutes"
+            :cta-link="story.link"
+            cta-text="Read more"
+            title-level="h3"
+            title-size="medium"
+            title-variant="dark-3"
+            bg-variant="white"
+            :display-border="true"
+            :display-label-text="false"
+            @cta-click="handleStoryClick(story)"
+          >
+            <p class="story-description">
+              {{ story.description }}
+            </p>
+          </CardImageArticle></ClientOnly
         >
-          <p class="story-description">
-            {{ story.description }}
-          </p>
-        </CardImageArticle>
       </div>
     </div>
   </section>
