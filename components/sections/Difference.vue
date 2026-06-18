@@ -22,33 +22,35 @@
 
     <div class="container">
       <div class="difference-grid">
-        <article v-for="feature in features" :key="feature.title" class="difference-card">
-          <img :src="feature.image" :alt="feature.title" class="card-image" />
-
-          <div class="overlay" />
-
-          <!-- Default Title -->
-          <div class="card-title">
-            <h3>{{ feature.title }}</h3>
-          </div>
-
-          <!-- Hover Content -->
-          <div class="card-content">
-            <h3>{{ feature.title }}</h3>
-
-            <p>
-              {{ feature.description }}
-            </p>
-
-            <button>Learn more</button>
-          </div>
-        </article>
+        <CardImageTile
+          v-for="feature in features"
+          :key="feature.title"
+          :bg-image-src="feature.image"
+          :title="feature.title"
+          :text="feature.description"
+          cta-text="Learn more"
+          cta-link="#"
+          title-size="xl"
+          title-variant="white"
+          text-size="medium"
+          text-variant="dark-3"
+          :display-gradient="true"
+          :gradient-opacity="0.85"
+          :display-cta="true"
+          :display-cta-button="true"
+          cta-button-mobile-variant="secondary"
+          cta-button-desktop-variant="secondary"
+          :clickable-card="true"
+          @click="handleLearnMore(feature)"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { CardImageTile } from '@rds-vue-ui/card-image-tile'
+
 const features = [
   {
     title: 'Experience world-class academics',
@@ -69,8 +71,11 @@ const features = [
     image: 'https://picsum.photos/800/600?random=9',
   },
 ]
-</script>
 
+const handleLearnMore = (feature: (typeof features)[number]) => {
+  console.log('Learn more:', feature.title)
+}
+</script>
 <style scoped>
 /* ==========================================
    ASU Difference Quote Section

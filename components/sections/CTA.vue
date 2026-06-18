@@ -15,11 +15,11 @@
           </p>
 
           <div class="cta-buttons">
-            <button class="cta-btn maroon">Visit ASU</button>
+            <a href="#" class="btn btn-lg btn-primary"> Visit ASU </a>
 
-            <button class="cta-btn maroon">Request information</button>
+            <a href="#" class="btn btn-lg btn-primary"> Request information </a>
 
-            <button class="cta-btn gold">Apply now</button>
+            <a href="#" class="btn btn-lg btn-secondary"> Apply now </a>
           </div>
         </div>
       </div>
@@ -30,28 +30,23 @@
 <style scoped>
 .cta-wrapper {
   padding: 72px 0;
-  /* background: #f5f5f5; */
 }
 
 .cta-section {
   position: relative;
-
   max-width: 1920px;
-  /* margin: 0 auto; */
-
   height: 600px;
 
   display: flex;
   align-items: center;
-
   overflow: hidden;
 
   background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2400&auto=format&fit=crop');
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
 
-  /* Parallax effect */
+  /* Parallax */
   background-attachment: fixed;
 }
 
@@ -103,50 +98,21 @@
   text-decoration: underline;
 }
 
+/* RDS Buttons */
 .cta-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
 }
 
-.cta-btn {
-  height: 52px;
-
-  padding: 0 30px;
-
-  border: none;
+.cta-buttons .btn {
   border-radius: 999px;
-
-  font-size: 18px;
   font-weight: 700;
-
-  cursor: pointer;
-
-  transition: all 0.25s ease;
+  min-width: 180px;
+  text-decoration: none;
 }
 
-.cta-btn.maroon {
-  background: #8c1d40;
-  color: white;
-}
-
-.cta-btn.gold {
-  background: #ffc627;
-  color: #191919;
-}
-
-.cta-btn:hover {
-  transform: translateY(-2px);
-}
-
-.cta-btn.maroon:hover {
-  background: #6f1732;
-}
-
-.cta-btn.gold:hover {
-  background: #eab308;
-}
-
+/* Tablet */
 @media (max-width: 992px) {
   .cta-section {
     height: auto;
@@ -178,80 +144,25 @@
     flex-direction: column;
   }
 
-  .cta-btn {
+  .cta-buttons .btn {
     width: 100%;
-    justify-content: center;
   }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-  .cta-wrapper {
-    padding: 40px 0;
-  }
-
-  .cta-section {
-    height: auto;
-    padding: 40px 0;
-
-    background-attachment: scroll;
-  }
-
-  .cta-container {
-    padding: 0 16px;
-  }
-
-  .cta-card {
-    width: 100%;
-    min-height: auto;
-
-    padding: 24px 20px;
-
-    background: #ffffff;
-  }
-
-  .cta-card h2 {
-    margin: 0 0 16px;
-
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  .cta-btn {
-    width: fit-content;
-  }
-
-  .cta-btn :deep(button) {
-    border-radius: 999px;
-    font-weight: 700;
-  }
-  .cta-card p {
-    margin: 0 0 20px;
-
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .cta-card p a {
-    font-size: 14px;
-  }
-
   .cta-buttons {
     flex-direction: column;
     gap: 12px;
+    align-items: flex-start;
   }
 
-  .cta-btn {
-    width: 100%;
-    height: 44px;
-
-    padding: 0 24px;
-
-    font-size: 15px;
-    font-weight: 700;
-  }
-
-  .cta-btn:hover {
-    transform: none;
+  .cta-buttons .btn {
+    width: fit-content;
+    min-width: 220px;
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 999px;
   }
 }
 </style>

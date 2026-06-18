@@ -4,61 +4,91 @@
       <h2 class="stories-title">Stories of excellence</h2>
 
       <div class="stories-grid">
-        <article v-for="story in stories" :key="story.title" class="story-card">
-          <div class="image-wrapper">
-            <img :src="story.image" :alt="story.title" />
-          </div>
-
-          <div class="story-content">
-            <h3>{{ story.title }}</h3>
-
-            <p>{{ story.description }}</p>
-          </div>
-        </article>
+        <CardImageArticle
+          v-for="story in stories"
+          :key="story.title"
+          :image-source="story.image"
+          :image-alt="story.title"
+          :title="story.title"
+          :date="story.date"
+          :minutes="story.minutes"
+          :cta-link="story.link"
+          cta-text="Read more"
+          title-level="h3"
+          title-size="medium"
+          title-variant="dark-3"
+          bg-variant="white"
+          :display-border="true"
+          :display-label-text="false"
+          @cta-click="handleStoryClick(story)"
+        >
+          <p class="story-description">
+            {{ story.description }}
+          </p>
+        </CardImageArticle>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
+import { CardImageArticle } from '@rds-vue-ui/card-image-article'
+
 const stories = [
   {
     title: 'ASU graduate wins $100K in pitch competition',
     description:
-      'Days after graduating from ASU, finance alum Logan Milano won $100,000 for his startup, Amryth, at Arizona’s premier collegiate entrepreneurship competition.',
+      'Days after graduating from ASU, finance alum Logan Milano won $100,000 for his startup.',
     image: 'https://picsum.photos/800/600?random=1',
+    date: 'June 17, 2026',
+    minutes: '2',
+    link: '#',
   },
   {
     title: 'Winners of prestigious Flinn Scholarship join ASU',
-    description:
-      'Top Arizona high school grads and winners of the Flinn Scholarship have chosen ASU for its academic experience, research opportunities and outstanding honors education.',
+    description: 'Top Arizona high school grads have chosen ASU for its academic experience.',
     image: 'https://picsum.photos/800/600?random=2',
+    date: 'June 15, 2026',
+    minutes: '3',
+    link: '#',
   },
   {
     title: 'Two ASU professors elected to National Academy of Sciences',
-    description:
-      'Amber Wutich and Robert Page were recognized by the renowned institution for their research in water insecurity and behavior of social insects.',
+    description: 'Researchers recognized for contributions to science and innovation.',
     image: 'https://picsum.photos/800/600?random=3',
+    date: 'June 12, 2026',
+    minutes: '4',
+    link: '#',
   },
   {
     title: 'University expands its role in chip research',
-    description:
-      'ASU is joining Applied Materials’ new EPIC Center, connecting universities and tech companies to accelerate semiconductor research and manufacturing innovation.',
+    description: 'ASU joins major initiatives accelerating semiconductor innovation.',
     image: 'https://picsum.photos/800/600?random=4',
+    date: 'June 10, 2026',
+    minutes: '2',
+    link: '#',
   },
   {
     title: 'Barrett, The Honors College is creating bright futures',
-    description:
-      'Barrett students go on to attend the best graduate schools, win prestigious fellowships and accept positions with some of the world’s leading organizations.',
+    description: 'Students continue earning prestigious fellowships and opportunities.',
     image: 'https://picsum.photos/800/600?random=5',
+    date: 'June 8, 2026',
+    minutes: '3',
+    link: '#',
   },
   {
     title: 'Alliance set to improve health outcomes in Arizona',
-    description:
-      'ASU Health’s partnership with HonorHealth will provide clinical training and research collaboration opportunities for students in the School of Medicine.',
+    description: 'ASU Health partnership expands clinical and research opportunities.',
     image: 'https://picsum.photos/800/600?random=6',
+    date: 'June 5, 2026',
+    minutes: '2',
+    link: '#',
   },
 ]
+
+const handleStoryClick = (story: (typeof stories)[number]) => {
+  console.log('Story clicked:', story.title)
+}
 </script>
 
 <style scoped>

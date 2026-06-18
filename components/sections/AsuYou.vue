@@ -34,7 +34,7 @@
 
     <!-- Content Card -->
     <div class="content-card">
-      <h2>Reimagining education for everyone</h2>
+      <h3>Reimagining education for everyone</h3>
 
       <span class="tag"> New programs for all ages </span>
 
@@ -220,19 +220,20 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
 
   z-index: 5;
 
-  width: 560px;
+  width: 780px;
+  height: 630px;
 
   margin-left: auto;
-  margin-right: 14%;
+  margin-right: 8%;
 
   background: #efefef;
 
-  padding: 56px 48px;
+  padding: 40px 48px;
 
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.content-card h2 {
+.content-card h3 {
   margin: 0 0 28px;
 
   color: #191919;
@@ -302,7 +303,7 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
     width: 520px;
   }
 
-  .content-card h2 {
+  .content-card h3 {
     font-size: 50px;
   }
 }
@@ -332,7 +333,7 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
     padding: 32px 28px;
   }
 
-  .content-card h2 {
+  .content-card h3 {
     font-size: 40px;
   }
 
@@ -354,7 +355,7 @@ const bgImage = 'https://images.unsplash.com/photo-1513258496099-48168024aec0?w=
     padding: 24px 20px;
   }
 
-  .content-card h2 {
+  .content-card h3 {
     font-size: 32px;
     margin-bottom: 20px;
   }

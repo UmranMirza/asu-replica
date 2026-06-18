@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 
   css: [
     '@rds-vue-ui/rds-theme-base/style/rds-theme-base.scss',
-    '~~/assets/styles/main.scss',
+    '~/assets/styles/main.scss',
     '@fortawesome/fontawesome-free/css/all.min.css',
   ],
 })

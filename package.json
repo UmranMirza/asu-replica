@@ -20,6 +20,8 @@
     "@fortawesome/free-brands-svg-icons": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/vue-fontawesome": "^3.2.0",
+    "@rds-vue-ui/card-image-article": "^0.1.13",
+    "@rds-vue-ui/card-image-tile": "^0.1.10",
     "@rds-vue-ui/footer-standard": "^0.4.1",
     "@rds-vue-ui/header-standard": "^0.3.5",
     "@rds-vue-ui/hero-video-apollo": "^0.9.0",
